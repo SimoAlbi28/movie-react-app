@@ -6,6 +6,7 @@
   transition: transform 0.3s ease;
   cursor: pointer;
   max-height: 30rem;
+  border: 2px solid #333;
 }
 
 .card-media:hover {
