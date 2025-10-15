@@ -1,3 +1,5 @@
+import './search.css';
+
 function Search() {
   return (
     <form className="search-form">
