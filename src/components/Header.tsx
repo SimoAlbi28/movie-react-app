@@ -1,19 +1,13 @@
 // Header.tsx
 import './Header.css';
+import Search from './Search';  
 
 function Header() {
   return (
     <header className="header">
       <div className="header-container">
-        <div className="logo">MediaApp</div>
-        <form className="search-form">
-          <input 
-            type="text" 
-            className="search-input" 
-            placeholder="Cerca film o serie..." 
-          />
-          <button type="submit" className="search-button">Cerca</button>
-        </form>
+        <div className="logo">MediaApp</div> 
+        <Search/>       
       </div>
     </header>
   );
