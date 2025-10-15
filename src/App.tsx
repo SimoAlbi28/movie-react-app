@@ -1,7 +1,7 @@
 // App.tsx
 import './App.css';
-import Header from '../components/Header';
-import HeroMedia from '../components/HeroMedia';
+import Header from './components/Header';
+import HeroMedia from './components/HeroMedia';
 
 function App() {
   return (
