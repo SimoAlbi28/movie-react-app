@@ -8,7 +8,7 @@ interface CardMediaProps {
 function CardMedia({ type = 'movie' }: CardMediaProps) {
   // Dati statici per movie
   const movieData = {
-    backdropPath: 'https://via.placeholder.com/300x450/333/fff?text=Movie+Poster',
+    backdropPath: '../public/movie.jpg',
     title: 'Il Grande Film',
     voteAverage: 8.5,
     overview: 'Una storia avvincente che tiene lo spettatore incollato allo schermo dall\'inizio alla fine.',
@@ -18,7 +18,7 @@ function CardMedia({ type = 'movie' }: CardMediaProps) {
 
   // Dati statici per serie
   const seriesData = {
-    backdropPath: 'https://via.placeholder.com/300x450/444/fff?text=Series+Poster',
+    backdropPath: '../public/series.png',
     name: 'La Grande Serie',
     voteAverage: 9.2,
     overview: 'Una serie televisiva epica che esplora temi profondi attraverso personaggi complessi.',

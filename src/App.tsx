@@ -8,10 +8,10 @@ function App() {
     <div className="app">
       <Header />
       <main className="main-content">
-        <HeroMedia sectionTitle="Trending movies" />
-        <HeroMedia sectionTitle="Trending series" />
-        <HeroMedia sectionTitle="Ultime uscite movie" />
-        <HeroMedia sectionTitle="Movie più votati" />
+        <HeroMedia sectionTitle="Trending movies" type = 'movie'/>
+        <HeroMedia sectionTitle="Trending series" type = 'series'/>
+        <HeroMedia sectionTitle="Ultime uscite movie" type = 'movie'/>
+        <HeroMedia sectionTitle="Movie più votati" type = 'movie'/>
       </main>
     </div>
   );
