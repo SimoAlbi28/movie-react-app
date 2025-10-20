@@ -1,51 +1,37 @@
 // CardMedia.tsx
 import './CardMedia.css';
+import type { ReactNode } from 'react';
 
 interface CardMediaProps {
-  type?: 'movie' | 'series';
+  backdropPath: string;
+  title: string;
+  voteAverage: number;
+  overview: string;
+  genres: string;
+  children?: ReactNode;
 }
 
-function CardMedia({ type = 'movie' }: CardMediaProps) {
-  // Dati statici per movie
-  const movieData = {
-    backdropPath: '../public/movie.jpg',
-    title: 'Il Grande Film',
-    voteAverage: 8.5,
-    overview: 'Una storia avvincente che tiene lo spettatore incollato allo schermo dall\'inizio alla fine.',
-    genres: 'Azione, Avventura, Drammatico',
-    runtime: 142
-  };
-
-  // Dati statici per serie
-  const seriesData = {
-    backdropPath: '../public/series.png',
-    name: 'La Grande Serie',
-    voteAverage: 9.2,
-    overview: 'Una serie televisiva epica che esplora temi profondi attraverso personaggi complessi.',
-    genres: 'Drama, Fantasy, Thriller',
-    numberOfSeasons: 5
-  };
-
-  const data = type === 'movie' ? movieData : seriesData;
-  const title = type === 'movie' ? movieData.title : seriesData.name;
-
+function CardMedia({ 
+  backdropPath, 
+  title, 
+  voteAverage, 
+  overview, 
+  genres, 
+  children 
+}: CardMediaProps) {
   return (
     <div className="card-media">
       <div className="card-image">
-        <img src={data.backdropPath} alt={title} />
-        <div className="card-rating">{data.voteAverage}</div>
+        <img src={backdropPath} alt={title} />
+        <div className="card-rating">{voteAverage}</div>
       </div>
       <div className="card-content">
         <h3 className="card-title">{title}</h3>
         <div className="card-meta">
-          {type === 'movie' ? (
-            <span className="card-runtime">{movieData.runtime} min</span>
-          ) : (
-            <span className="card-seasons">{seriesData.numberOfSeasons} stagioni</span>
-          )}
+          {children}
         </div>
-        <p className="card-genres">{data.genres}</p>
-        <p className="card-overview">{data.overview}</p>
+        <p className="card-genres">{genres}</p>
+        <p className="card-overview">{overview}</p>
       </div>
     </div>
   );
